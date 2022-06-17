@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Suspeitos</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div id="app" class="container mt-4">
+            <h1 class="display-4 text-center">
+            <i class="fas fa-user-secret text-primary"></i> Cadastro de <span class="text-primary">Suspeitos</span>
+            </h1>
+        <ul>
+            <li><a href="http://localhost/suspeitos/views/cadastro.html">Adicionar Suspeito</a></li>
+            <li><a href="http://localhost/suspeitos/views/consulta.html">Consultar</a></li>
+            <li style="float:right"><a href="#" class="logout">Logout</a></li>
+          </ul>
+            <div id="alert"></div>
+            <div class="d-grid gap-2" style="float:right; width: 25%">
+                <input type="submit" id="relatorio" value="Gerar Relatório" class="btn btn-outline-dark mt-2">
+            </div>
+            <table id="tabela" class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="select" class="relatorio"></th>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>UF</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="lista-suspeito"></tbody>
+            </table>
+        </div>
+        <script src="../services/consulta.js" type="module"></script>
+    </body>
+</html>

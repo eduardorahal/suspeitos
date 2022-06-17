@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Suspeitos</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div id="app" class="container mt-4">
+            <h1 class="display-4 text-center">
+            <i class="fas fa-user-secret text-primary"></i> Relatório de <span class="text-primary">Suspeitos</span></h1>
+            <table id="tabela" class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>UF</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-suspeito"></tbody>
+            </table>
+        </div>
+        <script src="../services/relatorio.js" type="module"></script>
+    </body>
+</html>

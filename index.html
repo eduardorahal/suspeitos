@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cadastro de Suspeitos</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <div class="container mt-4">
+        <div id="app" class="container mt-4">
             <h1 class="display-4 text-center">
-            <i class="fas fa-user-secret text-primary"></i> Cadastro de <span class="text-primary">Suspeitos</span></h1>
-            <form id="form-suspeito">
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" class="form-control">
+            <i class="fas fa-user-secret text-primary"></i> Cadastro de <span class="text-primary">Suspeitos</span>
+            </h1>
+        <ul>
+            <li><a href="http://localhost/suspeitos/views/cadastro.html">Adicionar Suspeito</a></li>
+            <li><a href="http://localhost/suspeitos/views/consulta.html">Consultar</a></li>
+            <li style="float:right"><a href="#" class="logout">Logout</a></li>
+          </ul>
+            <div id="container" style="text-align: center;">
+                <br>
+                <h1>Bem-Vindo ao Cadastro de Suspeitos</h1>
+                <br>
+                <h3>Este Sistema tem acesso restrito e suas informações são confidenciais</h3>
+                <br>
+                <div class="card bg-secondary col-sm-4" style="max-width: 20rem;">
+                    <div class="card-header">Acesso Seguro</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Não repasse seu Usuário e Senha a terceiros.</h4>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" class="form-control">
+                <div class="card bg-secondary col-sm-4" style="max-width: 20rem;">
+                    <div class="card-header">Conteúdo Seguro</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Não divulgue o conteúdo obtido a agentes não autorizados</h4>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="uf">UF</label>
-                    <select type="select" id="uf" class="form-control" onchange="buscaCidade(this.value)">
-                    </select>
+                <div class="card bg-secondary col-sm-4" style="max-width: 20rem;">
+                    <div class="card-header">Ambiente Seguro</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Não fotografe ou divulgue as telas do Sistema</h4>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <select type="select" id="cidade" class="form-control" disabled="true">
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" class="form-control">
-                </div>
-                <div class="d-grid gap-2">
-                    <input type="submit" value="Adicionar Suspeito" class="btn btn-primary btn-block mt-4">
-                </div>
-            </form>
-            <table class="table table-striped mt-5">
-                <thead>
-                    <tr>
-                    <th>CPF</th>
-                    <th>Nome</th>
-                    <th>Endereço</th>
-                    <th>Cidade</th>
-                    <th>UF</th>
-                    <th></th>
-                    </tr>
-                </thead>
-                <tbody id="lista-suspeito"></tbody>
-            </table>
+            </div>
         </div>
-        <script type="module">
-            import { buscaCidade, buscaUF } from './app.js';
+        <script src='./app.js' type="module">
         </script>
     </body>
 </html>
